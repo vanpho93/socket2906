@@ -1,1 +1,4 @@
-console.log('Hello 123 123');
+const io = require('socket.io-client');
+
+const socket = io();
+

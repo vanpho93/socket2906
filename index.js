@@ -14,4 +14,6 @@ server.listen(3000, () => console.log('Server started!')); //3
 
 io.on('connection', socket => {
     console.log(socket.id);
+    // setInterval(() => socket.emit('SERVER_SEND_MESSAGE', Math.random()), 1000);
+    socket.on('CLIENT_SEND_MESSAGE', message => console.log(message));
 });
